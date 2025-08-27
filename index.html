@@ -3,19 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Portifólio</title>
+
 </head>
-<body>
-    <main>
+<style>
+    .space-padding-main-container{
+        padding: 15vw;
+    }
+    .space-padding-container{
+        padding: 5vw;
+    }
+    .space-gap-container{
+        gap: 5vw;
+    }
+
+    .width-container{
+        max-width: 2160px;
+    }
+
+    .font-title {
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    .badge-img {
+        max-height: 16px;
+    }
+
+</style>
+<body class="min-vh-100">
+    <main class="vh-100 container d-flex flex-column justify-content-center  space-padding-main-container space-gap-container width-container">
         <section>
-            <h1>Xanderson Silva Souza - <span class="titleDev">Dev Back End</span></h1>
+            <h1 class="font-title ">Xanderson Silva Souza - <span class="titleDev">Dev Back End</span></h1>
             <h3>Transformando ideias em soluções de impacto para o mundo!</h3>
         </section>
-        <section>
-            <a href="pages/about.html"><button></button></a>
-            <a href="pages/projects.html"><button></button></a>
-            <a href="pages/contact.html"><button></button></a>
+        <section class="d-flex justify-content-center gap-4">
+            <a href="#about"><button>Sobre Mim</button></a>
+            <a href="#projects"><button>Projetos</button></a>
+            <a href="pages/contact.html"><button>Contate-me</button></a>
         </section>
     </main>
+    <section id="projects" class="vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
+
+        <article class="d-flex flex-wrap gap-3">
+            <div class="card d-flex align-items-center" style="width: 18rem;">
+                <img src="assets/sistema_catracas.png" class="card-img-top" alt="...">
+                <div class="p-2 d-flex flex-column align-items-center">
+                    <h4 class="card-title">Sistema de catracas</h4>
+                    <p class="card-text">Sistema de catracas com reconhecimento facial. A solução utiliza <strong>Python</strong>, <strong>PHP</strong> e <strong>SQLite</strong> para controlar o acesso de pessoas em ambientes escolares.</p>
+                </div>
+                <a href="https://github.com/XandersonSilva/Reconhecimento_Facial_Python"><button>Saiba mais</button></a>
+                </div>
+            
+        </article>
+    </section>
+    <section id="about" class="vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
+        <article>
+            <p>
+                Olá, me chamo Xanderson, um amante da tecnologia e inovação com foco em desenvolvimento back-end e uma paixão por transformar linhas de código em soluções que impactam o dia a dia. Minha jornada começou no Instituto Federal da Bahia campus Jacobina, onde cursei o Técnico em Informática integrado ao Ensino Médio, consolidando bases sólidas em lógica de programação, gestão de projetos e boas práticas de desenvolvimento. Atualmente estou cursando engenharia de software na Universidade Federal do Céara.
+            </p>
+            <p>
+                Minha expertise consiste em construir sistemas back-end, com destaque para:
+                Java e Javascript para APIs eficientes e integrações sólidas, além de modelagem e otimização de consultas em SQL/MySQL, garantindo performance e segurança.
+            </p>
+        </article>
+
+    </section>
+
+    <section id="about" class="vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
+        <a href="#">Linkedin</a>
+        <a href="#">Instagram</a>
+        <a href="#">Github</a>
+        <a href="#">whatsapp</a>
+        <p>e-mail <a href="#">xandersonsilvasouza@gmail.com</a></p>
+    </section>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
