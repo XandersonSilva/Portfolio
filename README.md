@@ -1,3 +1,3 @@
-# Portifólio
+# Portfólio
 
-Meu portifólio: https://xandersonsilva.github.io/Portifolio/
+Meu portfólio: https://xandersonsilva.github.io/Portifolio/
