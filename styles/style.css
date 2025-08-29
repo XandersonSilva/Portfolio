@@ -54,7 +54,53 @@
     .card{
         background-color: #191620;
         color:#ffffff;
-        border-radius: 27px;
-        
+        border-radius: 27px;     
     }
-   
+
+    .form-contact-container{
+        background-color: #FFD700;
+        padding: 2em 0;
+    }
+    .form-contact{
+        background-color: #000000;
+    }
+
+    .form-contact>div{
+        display: flex;
+        flex-direction: column;
+        color: #FFFFFF;
+    }
+    .form-contact>div>input{
+        padding: 0.2em 0.5em;
+    }
+   .icon-contact{
+        color: #FFD700;
+   }
+
+   .icon-contact-content>div>a{
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+   }
+
+   .icon-contact-content>div>a:hover{
+    color: #FFD700;
+   }
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+    background: #0d0d0d;
+    }
+
+
+    ::-webkit-scrollbar-thumb {
+    background: #FFD700;
+    border-radius: 6px;
+    }
+
+
+    ::-webkit-scrollbar-thumb:hover {
+    background: #FFF000;
+    }
