@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -165,8 +166,9 @@
                 <a target="_blank" href="https://wa.me/5574999615312">whatsapp</a>
             </div>
         </article>
-        <article class="col-12 col-md-8 form-contact-container d-flex align-items-center justify-content-center">
-            <form action="" class="form-contact w-75 min-h-75 rounded-4 d-flex flex-column p-4 gap-3">
+        <article class="col-12 col-md-8 form-contact-container d-flex align-items-center justify-content-center min-vh-100">
+            
+            <form id="contact-frm" action="https://formsubmit.co/ebd737c3dfdad21a6091715af384b8cb" method="POST" class="form-contact w-75 min-h-75 rounded-4 d-flex flex-column p-4 gap-3">
                 <h1>Entre em contato</h1>
                 <div>
                     <label for="name">Nome</label>
@@ -188,7 +190,7 @@
                 </div>
                 <div>
                     <label for="subject">Assunto</label>
-                    <input class="rounded-pill" type="text" name="subject" id="subject" 
+                    <input class="rounded-pill" type="text" name="_subject" id="subject" 
                     placeholder="Digite aqui..."
                     >
                 </div>
@@ -197,11 +199,46 @@
                     <textarea class="rounded-3" id="mesage" name="mesage" rows="6" cols="50" placeholder="Digite aqui..."></textarea>
                     
                 </div>
-                <input class="btn btn-outline-warning border-warning" type="submit" value="Enviar">
-
+                <input onclick="thanks()" class="btn btn-outline-warning border-warning" type="submit" value="Enviar">
             </form>
+
+            <div id="contact-thanks" class="hidden form-contact flex-column w-75 min-h-50 align-items-center justify-content-center rounded-4 p-4 gap-3">
+                <h1>Obrigado pelo contato!</h1>
+                <h4>Estarei enviando uma resposta assim que possível.</h4>
+
+                <button onclick="newMesage()" class="btn btn btn-outline-secondary">Enviar nova mensagem</button>
+            </div>
         </article>
+
+        
+        
     </section>
 </body> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+    function thanks(){
+        localStorage.setItem("submittedForm", true)
+    }
+    function newMesage(){
+        localStorage.setItem("submittedForm", false)
+
+        let contact_form = document.getElementById("contact-frm")
+        let contact_thanks = document.getElementById("contact-thanks")
+        contact_form.classList.add("d-flex")
+        contact_form.style.display= "flex"
+        contact_thanks.classList.remove("d-flex")
+        contact_thanks.classList.add("hidden")
+    }
+
+    if(localStorage.getItem("submittedForm") === "true"){
+        let contact_form = document.getElementById("contact-frm")
+        let contact_thanks = document.getElementById("contact-thanks")
+        contact_form.classList.remove("d-flex")
+        contact_form.style.display= "none"
+        contact_thanks.classList.remove("hidden")
+        contact_thanks.classList.add("d-flex")
+    }    
+
+
+</script>
 </html>

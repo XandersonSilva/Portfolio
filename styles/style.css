@@ -97,10 +97,18 @@
 
     ::-webkit-scrollbar-thumb {
     background: #FFD700;
-    border-radius: 6px;
+    
     }
 
 
     ::-webkit-scrollbar-thumb:hover {
     background: #FFF000;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    #contact-thanks h4{
+        color: #FFF;
     }
