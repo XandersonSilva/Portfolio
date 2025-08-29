@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,42 +12,16 @@
     <title>Portifólio</title>
 
 </head>
-<style>
-    .space-padding-main-container{
-        padding: 15vw;
-    }
-    .space-padding-container{
-        padding: 5vw;
-    }
-    .space-gap-container{
-        gap: 5vw;
-    }
-
-    .width-container{
-        max-width: 2160px;
-    }
-
-    .font-title {
-        font-family: "Press Start 2P", system-ui;
-        font-weight: 200;
-        font-style: normal;
-    }
-
-    .badge-img {
-        max-height: 16px;
-    }
-
-</style>
 <body class="min-vh-100">
     <main class="vh-100 container d-flex flex-column justify-content-center  space-padding-main-container space-gap-container width-container">
         <section>
-            <h1 class="font-title ">Xanderson Silva Souza - <span class="titleDev">Dev Back End</span></h1>
+            <h1 class="font-title ">Xanderson Silva Souza <br> Dev Back End</h1>
             <h3>Transformando ideias em soluções de impacto para o mundo!</h3>
         </section>
         <section class="d-flex justify-content-center gap-4">
-            <a href="#about"><button>Sobre Mim</button></a>
-            <a href="#projects"><button>Projetos</button></a>
-            <a href="pages/contact.html"><button>Contate-me</button></a>
+            <a href="#about"><button class="btn btn-outline-warning">Sobre Mim</button></a>
+            <a href="#projects"><button class="btn btn-outline-warning">Projetos</button></a>
+            <a href="pages/contact.html"><button class="btn btn-outline-warning">Contate-me</button></a>
         </section>
     </main>
     <section id="projects" class="vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
@@ -58,22 +33,71 @@
                     <h4 class="card-title">Sistema de catracas</h4>
                     <p class="card-text">Sistema de catracas com reconhecimento facial. A solução utiliza <strong>Python</strong>, <strong>PHP</strong> e <strong>SQLite</strong> para controlar o acesso de pessoas em ambientes escolares.</p>
                 </div>
-                <a href="https://github.com/XandersonSilva/Reconhecimento_Facial_Python"><button>Saiba mais</button></a>
+                <a href="https://github.com/XandersonSilva/Reconhecimento_Facial_Python"><button class="btn btn-outline-warning">Saiba mais</button></a>
+            </div>
+            <div class="card d-flex align-items-center" style="width: 18rem;">
+                <img src="assets/locadora.png" class="card-img-top" alt="...">
+                <div class="p-2 d-flex flex-column align-items-center">
+                    <h4 class="card-title">Locadora</h4>
+                    <p class="card-text">Sistema de locação de carros tendo como principais funcionalidades <strong>CRUD</strong>, upload de arquivos, envio de e-mails (via SMTP), <strong>pagamento via PIX</strong> e <strong>geração de QRCode</strong> . A solução utiliza <strong>PHP</strong> e <strong>JSON</strong> para a lógica de négocio e armazenamento de dados.</p>
                 </div>
+                <a href="https://github.com/XandersonSilva/Locadora_com_PHP"><button class="btn btn-outline-warning">Saiba mais</button></a>
+            </div>
             
         </article>
     </section>
-    <section id="about" class="vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
-        <article>
-            <p>
-                Olá, me chamo Xanderson, um amante da tecnologia e inovação com foco em desenvolvimento back-end e uma paixão por transformar linhas de código em soluções que impactam o dia a dia. Minha jornada começou no Instituto Federal da Bahia campus Jacobina, onde cursei o Técnico em Informática integrado ao Ensino Médio, consolidando bases sólidas em lógica de programação, gestão de projetos e boas práticas de desenvolvimento. Atualmente estou cursando engenharia de software na Universidade Federal do Céara.
-            </p>
-            <p>
-                Minha expertise consiste em construir sistemas back-end, com destaque para:
-                Java e Javascript para APIs eficientes e integrações sólidas, além de modelagem e otimização de consultas em SQL/MySQL, garantindo performance e segurança.
-            </p>
+    <section id="about" class="container d-flex flex-column justify-content-center align-items-center vh-100 space-padding-container width-container readble py-5">
+
+        <!-- Sobre Mim -->
+        <article class="col-12 col-md-7 mb-4">
+        <h2 class="mb-3">Sobre Mim</h2>
+        <p>
+            Olá! Sou <strong>Xanderson</strong>, apaixonado por <strong>tecnologia e inovação</strong>, com foco em <strong>desenvolvimento back-end</strong>.
+            Tenho como objetivo profissional me consolidar como um desenvolvedor que cria soluções práticas que levam pessoas e organizações a alcançarem seus objetivos.
+        </p>
+        <p>
+            Minha jornada começou no <strong>Instituto Federal da Bahia</strong> (Técnico em Informática) e hoje continuo expandindo conhecimentos cursando <strong>Engenharia de Software</strong> na <strong>Universidade Federal do Ceará</strong>.
+        </p>
         </article>
 
+  <!-- Tecnologias -->
+    <article class="row justify-content-center text-center mt-1">
+        <h2 class="mb-4">Tecnologias</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-4">
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="50">
+            <p>Java / Spring Boot</p>
+        </div>
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="50">
+            <p>Python</p>
+        </div>
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="50">
+            <p>PHP</p>
+        </div>
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50">
+            <p>JavaScript</p>
+        </div>
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="50">
+            <p>HTML5 / CSS3</p>
+        </div>
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="50">
+            <p>SQLite / MySQL</p>
+        </div>
+        <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="50">
+            <p>Git / GitHub</p>
+        </div>
+        </div>
+    </article>
+</section>
+
+
+    
     </section>
 
     <section id="about" class="vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
@@ -83,6 +107,6 @@
         <a href="#">whatsapp</a>
         <p>e-mail <a href="#">xandersonsilvasouza@gmail.com</a></p>
     </section>
-</body>
+</body> */
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>

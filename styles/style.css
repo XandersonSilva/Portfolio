@@ -1,0 +1,51 @@
+.space-padding-main-container{
+        padding: 15vw;
+    }
+    .space-padding-container{
+        padding: 5vw;
+    }
+    .space-gap-container{
+        gap: 5vw;
+    }
+
+    .width-container{
+        max-width: 2160px;
+    }
+
+    .font-title {
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    .badge-img {
+        max-height: 16px;
+    }
+
+    span{
+        color:#FFD700;
+        font-weight: bolder;
+        font-size: 1.1em;
+    }
+    body{
+        color: #000000;
+        background-color: #0d0d0d;
+    }
+
+    .readble{
+        background-color: #FFD700;
+        color: #000000  ;
+    }
+    h1{
+        color: #FFD700;
+    }
+    h3{
+        color: #FFFFFF;
+    }
+    
+    .btn{
+        font-size: 1.2em;
+        border-radius: 32px;
+        padding: 0.5em;
+        font-weight: bold;
+    }
