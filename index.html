@@ -14,39 +14,73 @@
 </head>
 <body class="min-vh-100">
     <main class="vh-100 container d-flex flex-column justify-content-center  space-padding-main-container space-gap-container width-container">
-        <section>
+        <section class="d-flex flex-column align-items-center">
             <h1 class="font-title ">Xanderson Silva Souza <br> Dev Back End</h1>
             <h3>Transformando ideias em soluções de impacto para o mundo!</h3>
         </section>
-        <section class="d-flex justify-content-center gap-4">
+        <section class="d-flex justify-content-center flex-wrap gap-4">
             <a href="#about"><button class="btn btn-outline-warning">Sobre Mim</button></a>
             <a href="#projects"><button class="btn btn-outline-warning">Projetos</button></a>
-            <a href="pages/contact.html"><button class="btn btn-outline-warning">Contate-me</button></a>
+            <a href="#contact"><button class="btn btn-outline-warning">Contate-me</button></a>
         </section>
     </main>
-    <section id="projects" class="vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
 
-        <article class="d-flex flex-wrap gap-3">
-            <div class="card d-flex align-items-center" style="width: 18rem;">
+    <!-- Projetos -->
+    <section id="projects" class="min-vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
+    
+        <article class="d-flex flex-wrap justify-content-around gap-4">
+            <div class="card d-flex align-items-center justify-content-between" style="width: 18rem;">
                 <img src="assets/sistema_catracas.png" class="card-img-top" alt="...">
                 <div class="p-2 d-flex flex-column align-items-center">
                     <h4 class="card-title">Sistema de catracas</h4>
-                    <p class="card-text">Sistema de catracas com reconhecimento facial. A solução utiliza <strong>Python</strong>, <strong>PHP</strong> e <strong>SQLite</strong> para controlar o acesso de pessoas em ambientes escolares.</p>
+                    <p class="card-text">Sistema de catracas com reconhecimento facial. A solução utiliza <strong>Python</strong>, <strong>PHP</strong> e <strong>SQLite</strong> para controlar o acesso de pessoas.</p>
                 </div>
-                <a href="https://github.com/XandersonSilva/Reconhecimento_Facial_Python"><button class="btn btn-outline-warning">Saiba mais</button></a>
+                <a class="w-100" target="_blank" href="https://github.com/XandersonSilva/Reconhecimento_Facial_Python"><button class="w-100 btn btn-outline-warning">Saiba mais</button></a>
             </div>
-            <div class="card d-flex align-items-center" style="width: 18rem;">
+            <div class="card d-flex align-items-center justify-content-between" style="width: 18rem;">
                 <img src="assets/locadora.png" class="card-img-top" alt="...">
                 <div class="p-2 d-flex flex-column align-items-center">
                     <h4 class="card-title">Locadora</h4>
-                    <p class="card-text">Sistema de locação de carros tendo como principais funcionalidades <strong>CRUD</strong>, upload de arquivos, envio de e-mails (via SMTP), <strong>pagamento via PIX</strong> e <strong>geração de QRCode</strong> . A solução utiliza <strong>PHP</strong> e <strong>JSON</strong> para a lógica de négocio e armazenamento de dados.</p>
+                    <p class="card-text">
+                        Sistema de locação de carros com <strong>CRUD</strong>, upload de arquivos, envio de e-mails via <strong>SMTP</strong>, 
+                        <strong>pagamento via PIX</strong> e <strong>QR Code</strong>. Desenvolvido em <strong>PHP</strong> e <strong>JSON</strong>.
+                    </p>
+
                 </div>
-                <a href="https://github.com/XandersonSilva/Locadora_com_PHP"><button class="btn btn-outline-warning">Saiba mais</button></a>
+                <a class="w-100" target="_blank" href="https://github.com/XandersonSilva/Locadora_com_PHP"><button class="w-100 btn btn-outline-warning">Saiba mais</button></a>
             </div>
+            <div class="card d-flex align-items-center justify-content-between" style="width: 18rem;">
+                <img src="assets/sudoku.png" class="card-img-top" alt="...">
+                <div class="p-2 d-flex flex-column align-items-center">
+                    <h4 class="card-title">Sudoku</h4>
+                    <p class="card-text">Jogo de terminal sudoku com logica integrada para geração de tabuleiros aleatoriamente. Desenvolvido em <strong>JAVA</strong>.</p>
+                </div>
+                <a class="w-100" target="_blank" href="https://github.com/XandersonSilva/Sudoku_Java"><button class="w-100 btn btn-outline-warning">Saiba mais</button></a>
+            </div>
+
+            <div class="card d-flex align-items-center justify-content-between" style="width: 18rem;">
+                <img src="assets/ritmoTask.png" class="card-img-top" alt="...">
+                <div class="p-2 d-flex flex-column align-items-center">
+                    <h4 class="card-title">RitmoTask</h4>
+                    <p class="card-text">API REST de gerenciamento de tarefas baseado no modelo Kanban. . Desenvolvido em <strong>JAVA</strong> com <strong>Spring Boot</strong> e usando o <strong>MySQL</strong> para armazenamento.</p>
+                </div>
+                <a class="w-100" target="_blank" href="https://github.com/XandersonSilva/RitmoTask/tree/main"><button class="w-100 btn btn-outline-warning">Saiba mais</button></a>
+            </div>
+
+            <div class="card d-flex align-items-center justify-content-between" style="width: 18rem;">
+                <img src="assets/viacepSpringPatterns.png" class="card-img-top" alt="...">
+                <div class="p-2 d-flex flex-column align-items-center">
+                    <h4 class="card-title">Viacep Spring Patterns</h4>
+                    <p class="card-text">API REST em <strong>Java Spring</strong> para gerenciamento de clientes, com foco em integração a uma <strong>API externa (ViaCEP)</strong> para consulta de endereços.</p>
+                </div>
+                <a class="w-100" target="_blank" href="https://github.com/XandersonSilva/viacep-spring-patterns"><button class="w-100 btn btn-outline-warning">Saiba mais</button></a>
+            </div>
+
+            
             
         </article>
     </section>
-    <section id="about" class="container d-flex flex-column justify-content-center align-items-center vh-100 space-padding-container width-container readble py-5">
+    <section id="about" class="container d-flex flex-column justify-content-center align-items-center min-vh-100 space-padding-container width-container readble py-5">
 
         <!-- Sobre Mim -->
         <article class="col-12 col-md-7 mb-4">
@@ -100,12 +134,12 @@
     
     </section>
 
-    <section id="about" class="vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
-        <a href="#">Linkedin</a>
-        <a href="#">Instagram</a>
-        <a href="#">Github</a>
-        <a href="#">whatsapp</a>
-        <p>e-mail <a href="#">xandersonsilvasouza@gmail.com</a></p>
+    <section id="contact" class="min-vh-100 container d-flex flex-column justify-content-center  space-padding-container space-gap-container width-container">
+        <a target="_blank" href="#">Linkedin</a>
+        <a target="_blank" href="#">Instagram</a>
+        <a target="_blank" href="#">Github</a>
+        <a target="_blank" href="#">whatsapp</a>
+        <p>e-mail <a target="_blank" href="#">xandersonsilvasouza@gmail.com</a></p>
     </section>
 </body> */
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
