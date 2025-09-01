@@ -12,6 +12,10 @@ let quadrado = [3,4,5,12,13,14,21,22,23]
 let t = [4,12,13,14]
 let s = [4,5,12,13]
 let linha = [3,4,5]
+let record = 0
+if (localStorage.getItem("record") == null) {
+    localStorage.setItem("record", record)
+}
 
 let formatos = [quadrado, t, s, linha]
 
@@ -54,8 +58,12 @@ function reverterFundoDivPorForma(figuraAtual){
 }
 
 function gameover(){
+    record = localStorage.getItem("record")
+    if (score > record) {
+        record = score
+        localStorage.setItem("record", record)
+    }
     score = 0
-    document.getElementById("score").textContent = ""
     for (let i = 0; i < game.length; i++) {
         game[i] = 0
         document.getElementById(i).style.background = "#0d0d0d";
@@ -161,6 +169,7 @@ function descerUmaLinha(figuraAtual){
         }
         reverterFundoDivPorForma(novoFormato)
         novoFormato = Array.from(novaPosicao)
+        mudarFundoDivPorForma(novoFormato)
     }
 
     function moverDireita(){
@@ -202,6 +211,7 @@ function descerUmaLinha(figuraAtual){
         }
         reverterFundoDivPorForma(novoFormato)
         novoFormato = Array.from(novaPosicao)
+        mudarFundoDivPorForma(novoFormato)
     }
 
     function retirarLinhaCompleta(){
@@ -246,8 +256,9 @@ function descerUmaLinha(figuraAtual){
             }
             score += 100
         }
-        let valorScore = "SCORE:" + score
-        document.getElementById("score").textContent = valorScore
+        record = localStorage.getItem("record")
+        let valorScore =  "<div> SCORE: " + score + "</div>" + "<div>MAX: "+ record + "</div>"
+        document.getElementById("score").innerHTML = valorScore
     }
 
     function rotacionar(){
