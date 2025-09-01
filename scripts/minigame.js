@@ -125,24 +125,23 @@ function descerUmaLinha(figuraAtual){
     function moverEsquerda(){
         let novaPosicao = []
         
-        switch (novoFormato.length) {
-            case 9:
+        switch (formatoAtual) {
+            // 0:quadrado
+            // 1:t
+            // 2:s
+            // 3:linha
+            case 0:
                 if (game[novoFormato[6] -1] == 1) {
                     return
                 }
                 break;
-            case 4:
-                let copiaFormato = Array.from(novoFormato.splice(0,1))
-                let formatoS = false
-                for (let i = 0; i < copiaFormato.length; i++) {
-                    if (copiaFormato[i] - i != copiaFormato[0]) {
-                        formatoS = true
-                    }
-                }
-                if (formatoS && game[novoFormato[0] -1] == 1) {
+            case 1:
+                if (game[novoFormato[0] -1] == 1) {
                     return
                 }
-                if (game[novoFormato[1] -1] == 1) {
+                break;
+            case 2:
+                if (game[novoFormato[2] -1] == 1) {
                     return
                 }
                 break;
@@ -167,13 +166,22 @@ function descerUmaLinha(figuraAtual){
     function moverDireita(){
         let novaPosicao = []
         
-        switch (novoFormato.length) {
-            case 9:
+        switch (formatoAtual) {
+            // 0:quadrado
+            // 1:t
+            // 2:s
+            // 3:linha
+            case 0:
                 if (game[novoFormato[8] +1] == 1) {
                     return
                 }
                 break;
-            case 4:
+            case 1:
+                if (game[novoFormato[3] +1] == 1){
+                    return
+                }
+                break;
+            case 2:
                 if (game[novoFormato[3] +1] == 1){
                     return
                 }
