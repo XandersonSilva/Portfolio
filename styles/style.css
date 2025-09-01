@@ -116,10 +116,16 @@
     .title-wite{
         color: #FFF;
     }
+    #game-desktop>.mini-game>div>div{
+        width: 30px;
+        height: 30px;
+        border: 1px dotted;
+        border-color: #151515;
+    }
     .mini-game>div>div{
         width: 40px;
         height: 40px;
-        border: 1px solid;
+        border: 1px dotted;
         border-color: #181818;
     }
     .virarPraEsquerda{
