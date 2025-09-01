@@ -116,3 +116,30 @@
     .title-wite{
         color: #FFF;
     }
+    .mini-game>div>div{
+        width: 40px;
+        height: 40px;
+        border: 1px solid;
+        border-color: #181818;
+    }
+    .virarPraEsquerda{
+        transform: rotate(-90deg);
+    }
+    .mini-game>div button{
+        border-radius: 30%;
+        width:  36px;
+        height: 36px;
+        padding: 0;
+    }
+    .btnHidden{
+        opacity: 0;
+        cursor: default;
+    }
+    .score{
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 200;
+        font-style: normal;
+        color: #FFD700;
+    }
+
+   

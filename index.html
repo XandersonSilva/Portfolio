@@ -132,7 +132,8 @@
         </article>
     </section>
 
-    <section class="container d-flex flex-column gap-3 justify-content-center align-items-center min-vh-100 space-padding-container width-container  py-5">
+    <!-- Artigos -->
+    <!-- <section class="container d-flex flex-column gap-3 justify-content-center align-items-center min-vh-100 space-padding-container width-container  py-5">
 
         <h2 class="m-4 title-wite">Artigo Publicado</h2>
         <article class="w-75 d-flex flex-column gap-3 justify-content-center align-items-center">
@@ -143,7 +144,7 @@
                 Acesse o artigo na editora Even3
             </a>
         </article>
-</section>
+</section> -->
 
 
     <!-- Formulário de contato e links -->
@@ -180,6 +181,9 @@
                 </svg>
                 <a target="_blank" href="https://wa.me/5574999615312">whatsapp</a>
             </div>
+        
+        <span id="game-desktop"></span>        
+
         </article>
         <article class="col-12 col-md-8 form-contact-container d-flex align-items-center justify-content-center min-vh-100">
             
@@ -224,36 +228,156 @@
                 <button onclick="newMesage()" class="btn btn btn-outline-secondary">Enviar nova mensagem</button>
             </div>
         </article>
+        <span id="game-mobile"></span>        
+        
 
-        
-        
+    
+
+
     </section>
 </body> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="scripts/thanks.js"></script>
+<script src="scripts/minigame.js"></script>
+
 <script>
-    function thanks(){
-        localStorage.setItem("submittedForm", true)
+    function ajustarTela() {
+    const GAME = `
+      <section class="mini-game game-desktop d-flex flex-column container text-center align-items-center p-4" id="mini-game">
+        <div class="d-flex flex-row">
+            <div id="0"></div>
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+            <div id="4"></div>
+            <div id="5"></div>
+            <div id="6"></div>
+            <div id="7"></div>
+            <div id="8"></div>
+        </div>
+        <div class="d-flex flex-row">
+            <div id="9"></div>
+            <div id="10"></div>
+            <div id="11"></div>
+            <div id="12"></div>
+            <div id="13"></div>
+            <div id="14"></div>
+            <div id="15"></div>
+            <div id="16"></div>
+            <div id="17"></div>
+        </div>
+        <div class="d-flex flex-row">
+            <div id="18"></div>
+            <div id="19"></div>
+            <div id="20"></div>
+            <div id="21"></div>
+            <div id="22"></div>
+            <div id="23"></div>
+            <div id="24"></div>
+            <div id="25"></div>
+            <div id="26"></div>
+        </div>
+        <div class="d-flex flex-row">
+            <div id="27"></div>
+            <div id="28"></div>
+            <div id="29"></div>
+            <div id="30"></div>
+            <div id="31"></div>
+            <div id="32"></div>
+            <div id="33"></div>
+            <div id="34"></div>
+            <div id="35"></div>
+        </div>
+        <div class="d-flex flex-row">
+            <div id="36"></div>
+            <div id="37"></div>
+            <div id="38"></div>
+            <div id="39"></div>
+            <div id="40"></div>
+            <div id="41"></div>
+            <div id="42"></div>
+            <div id="43"></div>
+            <div id="44"></div>
+        </div>
+        <div class="d-flex flex-row">
+            <div id="45"></div>
+            <div id="46"></div>
+            <div id="47"></div>
+            <div id="48"></div>
+            <div id="49"></div>
+            <div id="50"></div>
+            <div id="51"></div>
+            <div id="52"></div>
+            <div id="53"></div>
+        </div>
+        <div class="d-flex flex-row">
+            <div id="54"></div>
+            <div id="55"></div>
+            <div id="56"></div>
+            <div id="57"></div>
+            <div id="58"></div>
+            <div id="59"></div>
+            <div id="60"></div>
+            <div id="61"></div>
+            <div id="62"></div>
+        </div>
+        <div class="d-flex flex-row">
+            <div id="63"></div>
+            <div id="64"></div>
+            <div id="65"></div>
+            <div id="66"></div>
+            <div id="67"></div>
+            <div id="68"></div>
+            <div id="69"></div>
+            <div id="70"></div>
+            <div id="71"></div>
+        </div>
+        <div class="d-flex flex-row">
+            <div id="72"></div>
+            <div id="73"></div>
+            <div id="74"></div>
+            <div id="75"></div>
+            <div id="76"></div>
+            <div id="77"></div>
+            <div id="78"></div>
+            <div id="79"></div>
+            <div id="80"></div>
+        </div>
+        <br>
+        <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+                <button onclick="rotacionar()" class="btn  btn-outline-warning"><h2 class="virarPraEsquerda">></h2></button>
+            <article class="d-flex flex-row justify-content-center">
+                <button onclick="moverEsquerda()" class="btn btn-outline-warning"><h2><</h2></button>
+                <span class="btn btn-outline-warning btnHidden"><h2>></h2></span>
+                <button onclick="moverDireita()" class="btn btn-outline-warning"><h2>></h2></button>
+            </article>
+        </div>
+        <span id="score" class="score"></span>
+    </section>
+                    `
+      const desktop = document.getElementById("game-desktop");
+      const mobile =  document.getElementById("game-mobile");
+        
+      if (window.innerWidth <= 780) {
+        // Tela pequena → mostra versão mobile
+        desktop.innerHTML = "";
+        desktop.style.display = "none";
+        mobile.style.display = "block";
+        mobile.innerHTML = GAME;
+
+      } else {
+        // Tela grande → mostra versão desktop
+        desktop.style.display = "block";
+        desktop.innerHTML = GAME;
+        mobile.innerHTML = "";
+        mobile.style.display = "none";
+      }
     }
-    function newMesage(){
-        localStorage.setItem("submittedForm", false)
 
-        let contact_form = document.getElementById("contact-frm")
-        let contact_thanks = document.getElementById("contact-thanks")
-        contact_form.classList.add("d-flex")
-        contact_form.style.display= "flex"
-        contact_thanks.classList.remove("d-flex")
-        contact_thanks.classList.add("hidden")
-    }
+    // Chama uma vez ao carregar
+    ajustarTela();
 
-    if(localStorage.getItem("submittedForm") === "true"){
-        let contact_form = document.getElementById("contact-frm")
-        let contact_thanks = document.getElementById("contact-thanks")
-        contact_form.classList.remove("d-flex")
-        contact_form.style.display= "none"
-        contact_thanks.classList.remove("hidden")
-        contact_thanks.classList.add("d-flex")
-    }    
-
-
-</script>
+    // Reage quando a tela é redimensionada
+    window.addEventListener("resize", ajustarTela);
+  </script>
 </html>
